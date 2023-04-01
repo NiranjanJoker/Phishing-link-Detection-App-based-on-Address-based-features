@@ -1,0 +1,13 @@
+pc = 0 ;
+String url = JOptionPane . showInputDialog ( "enter the url :" ) ;
+if ( url . indexOf ( "www" ) == - 1 ) pc = pc + 1 ;
+if ( url . length ( ) > 54 ) pc = pc + 1 ;
+if ( url . indexOf ( "-" ) != - 1 ) pc = pc + 1 ;
+if ( url . indexOf ( "tiny" ) != - 1 ) pc = pc + 1 ;
+if ( url . contains ( "//" ) ) pc = pc + 1 ;
+if ( url . indexOf ( "@" ) != - 1 ) pc = pc + 1 ;
+if ( url . indexOf ( "." ) > 3 ) pc = pc + 1 ;
+if ( url . indexOf ( "http" ) > 1 ) pc = pc + 1 ;
+System . out . println ( "The website's phishing rate out of 8 is:" + pc ) ;
+return pc ;
+}
